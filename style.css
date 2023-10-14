@@ -1,0 +1,1704 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+#show {
+  position: absolute;
+}
+.content {
+  background-image: url("/task09-19-2023/images/wheelbg.png");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 45vw;
+
+  position: absolute;
+}
+.buttonIcon img {
+  height: 34px;
+  z-index: 7;
+}
+.buttonIcon {
+  display: flex;
+  justify-content: end;
+  margin-right: 2.5vw;
+}
+#wheeltop {
+  position: absolute;
+  transform: translateX(21vw);
+  top: 1vh;
+  height: 6vw;
+}
+#person {
+  position: absolute;
+  transform: translateX(20vw);
+  top: 15vh;
+  height: 35vh;
+}
+#account {
+  position: absolute;
+  transform: translateX(20vw);
+  bottom: 9vh;
+}
+#download {
+  position: absolute;
+  transform: translateX(33vw);
+  bottom: 12vh;
+  height: 80px;
+}
+.rotating {
+  position: relative;
+}
+#circle {
+  position: absolute;
+  transform: translateY(-10vh);
+  height: 45vh;
+  left: -2.7vw;
+  z-index: 1;
+}
+#frame {
+  position: absolute;
+  height: 55vh;
+  top: -15vh;
+  left: -5vw;
+}
+#win {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(6vh);
+  left: 5vw;
+}
+#target {
+  z-index: 4;
+  position: absolute;
+  transform: translateY(-11vh);
+  left: 7.4vw;
+}
+.recent {
+  position: absolute;
+  transform: translateY(25vw);
+  color: white;
+  font-style: italic;
+  right: 8vw;
+  cursor: pointer;
+}
+.recentJackpot {
+  height: 67vh;
+  width: 30vw;
+  z-index: 7;
+  position: absolute;
+  background: linear-gradient(180deg, #2078fb, #0a0f32 13%, #0a0f32);
+  padding: 32px 32px 0;
+  border-radius: 20px;
+  top: -5vh;
+  right: -35vw;
+  transition: 0.6s ease;
+  opacity: 0;
+}
+.mainHeader {
+  display: flex;
+  justify-content: end;
+}
+.headerSlide {
+  color: white;
+  display: flex;
+  font-style: italic;
+}
+.headerSlide img {
+  height: 40px;
+  margin-left: 5vw;
+}
+.recentAward {
+  background: linear-gradient(1turn, #1043ee, #1b89ff 55%, #34d6ff);
+  max-width: 30%;
+  white-space: nowrap;
+  font-style: italic;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+.timeUserBonus {
+  color: #ca20b1;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+}
+.slide-from-right {
+  transform: translateX(-100%);
+  display: block;
+  opacity: 1;
+}
+#y {
+  margin-left: 10vw;
+}
+#questionMark {
+  cursor: pointer;
+}
+p {
+  color: white;
+  line-height: 1.5;
+}
+.par {
+  margin: 10% 0;
+}
+.spinFast {
+  animation: spinFast 0.5s linear infinite;
+}
+
+.rotate {
+  animation: spin 50s linear infinite;
+}
+.dataProgress {
+  position: absolute;
+  color: white;
+  transform: translateY(42vh);
+  left: 55%;
+  font-style: italic;
+  font-size: 25px;
+  z-index: 7;
+}
+.dataButton {
+  position: absolute;
+  color: white;
+  transform: translateY(39vh);
+  right: 21.5%;
+  font-size: 20px;
+  font-style: italic;
+  z-index: 7;
+}
+.dataHeader {
+  position: absolute;
+  color: white;
+  transform: translateY(-1.5vh);
+  font-style: italic;
+  right: 12vw;
+  font-size: 16px;
+}
+.dataAmount {
+  position: absolute;
+  color: white;
+  transform: translateY(20px);
+  font-style: italic;
+  right: 12%;
+  color: #ffdf12;
+  font-size: 30px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinFast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1600px) {
+  .content {
+    width: 60vw;
+    height: 60vh;
+  }
+  #win {
+    transform: translateY(4.5vh);
+    left: 6vw;
+  }
+
+  #frame {
+    left: -5.2vw;
+  }
+  #wheeltop {
+    transform: translateX(26vw);
+    height: 14vh;
+    top: 1vh;
+    width: 34vw;
+  }
+  .dataHeader {
+    right: 20vw;
+    transform: translateY(-3vh);
+    font-size: 15px;
+  }
+  .dataAmount {
+    font-size: 25px;
+    transform: translateX(-5vw);
+    top: 7vh;
+  }
+  .dataProgress {
+    top: 20px;
+  }
+  .recentJackpot {
+    height: 65vh;
+    width: 40vw;
+  }
+
+  .slide-from-right {
+    transform: translateX(-90%);
+  }
+  p {
+    font-size: 14px;
+  }
+  .recentAward {
+    max-width: 38%;
+  }
+  #person {
+    transform: translateX(25vw);
+    top: 12vh;
+    height: 40vh;
+  }
+  #account {
+    transform: translateX(25vw);
+    width: 20vw;
+  }
+  #download {
+    transform: translateX(43vw);
+    bottom: 14vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .dataButton {
+    transform: translateY(35vh);
+    left: 75%;
+  }
+  .recent {
+    transform: translateY(51vh);
+    right: 15vw;
+  }
+  #target {
+    transform: translateY(-11vh);
+    left: 8.3vw;
+  }
+  .buttonIcon img {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1500px){
+  #win {
+    left: 6vw;
+    top: 15px;
+  }
+  #target {
+    left: 9vw;
+
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #win {
+    left: 7vw;
+    top: 15px;
+  }
+  #target {
+    left: 9.7vw;
+
+  }
+}
+
+
+@media screen and (max-width: 1399px) {
+  .content {
+    width: 60vw;
+    height: 60vh;
+  }
+  #win {
+    transform: translateY(4.5vh);
+    left: 7vw;
+  }
+
+  #frame {
+    left: -5.5vw;
+  }
+  #wheeltop {
+    transform: translateX(26vw);
+    height: 14vh;
+    top: 1vh;
+  }
+  .dataHeader {
+    right: 17vw;
+    transform: translateY(-2vh);
+  }
+  .dataAmount {
+    font-size: 25px;
+  }
+  .dataProgress {
+    top: 20px;
+  }
+  .recentJackpot {
+    height: 65vh;
+    width: 40vw;
+  }
+
+  .slide-from-right {
+    transform: translateX(-90%);
+  }
+  p {
+    font-size: 14px;
+  }
+  .recentAward {
+    max-width: 38%;
+  }
+  #person {
+    transform: translateX(25vw);
+    top: 12vh;
+    height: 40vh;
+  }
+  #account {
+    transform: translateX(25vw);
+  }
+  #download {
+    transform: translateX(43vw);
+    bottom: 14vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .dataButton {
+    transform: translateY(36vh);
+    left: 75%;
+  }
+  .recent {
+    transform: translateY(51vh);
+    right: 15vw;
+  }
+  #target {
+    transform: translateY(-11vh);
+    left: 10vw;
+  }
+  .buttonIcon img {
+    height: 38px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main {
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0 20vw;
+  }
+  #person {
+    position: absolute;
+    transform: translateX(55vw);
+    top: 12vh;
+    height: 32vh;
+  }
+  .content {
+    height: 55vh;
+    width: 100%;
+  }
+  #circle {
+    height: 50vh;
+    transform: translateY(-14vh);
+    left: -10px;
+  }
+  #win {
+    transform: translateY(3vh);
+    left: 11.5vw;
+  }
+  #frame {
+    height: 60vh;
+    top: -19vh;
+    left: -3.5vw;
+  }
+  #target {
+    transform: translateY(-15vh);
+    left: 14vw;
+    height: 35px;
+  }
+  #person {
+    transform: translateX(35vw);
+  }
+  #account {
+    transform: translateX(35vw);
+    bottom: 10vh;
+    height: 7vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(50vw);
+    bottom: 14vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 33px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(43vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 60vh;
+    width: 50vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-170%);
+  }
+  .recentAward {
+    max-width: 20%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #y {
+    margin-left: 15vw;
+    margin-bottom: 20px;
+  }
+  #x {
+    margin-left: 12vw;
+    margin-bottom: 20px;
+  }
+  #wheeltop {
+    transform: translateX(32vw);
+    top: 0.5vh;
+    height: 8vw;
+    width: 26vw;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(37vh);
+    left: 69%;
+  }
+  .dataButton {
+    transform: translateY(31vh);
+    left: 87%;
+  }
+  .dataHeader {
+    transform: translateY(-2vh);
+    right: 15vw;
+    font-size: 11px;
+  }
+  .dataAmount {
+    transform: translateY(-10px);
+    right: 13%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .dataProgress {
+    transform: translateY(37vh);
+    left: 67%;
+    font-size: 25px;
+  }
+  .dataButton {
+    transform: translateY(31vh);
+    left: 87%;
+  }
+  #target {
+    transform: translateY(-15vh);
+    left: 13.5vw;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .main {
+    padding: 0 15vw;
+  }
+  .content {
+    height: 65vh;
+  }
+  #circle {
+    height: 50vh;
+    transform: translateY(-5vh);
+    left: -10px;
+  }
+  #win {
+    transform: translateY(13vh);
+    left: 12.5vw;
+  }
+  #frame {
+    height: 60vh;
+    top: -10vh;
+    left: -4vw;
+  }
+  #target {
+    transform: translateY(-6vh);
+    left: 15.2vw;
+    height: 35px;
+  }
+  #person {
+    transform: translateX(33vw);
+    top: 17vh;
+    height: 40vh;
+  }
+  #account {
+    transform: translateX(35vw);
+    bottom: 10vh;
+  }
+
+  .buttonIcon img {
+    height: 35px;
+  }
+
+  #wheeltop {
+    transform: translateX(33vw);
+    top: 0.5vh;
+    height: 10vw;
+    width: 37vw;
+  }
+  .dataAmount {
+    transform: translateY(-5px);
+    right: 15%;
+  }
+
+  .dataHeader {
+    position: absolute;
+    transform: translateY(-2vh);
+    right: 18vw;
+    font-size: 15px;
+  }
+  .dataProgress {
+    transform: translateY(47vh);
+    left: 60%;
+  }
+  .dataButton {
+    transform: translateY(36vh);
+    left: 75%;
+  }
+  .recent {
+    transform: translateY(55vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 70vh;
+    width: 50vw;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-180%);
+  }
+  .dataButton {
+    transform: translateY(41vh);
+  }
+}
+@media screen and (max-width: 1099px) {
+  .main {
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0 20vw;
+  }
+
+  .content {
+    height: 65vh;
+    width: 80vw;
+  }
+  .main {
+    padding: 0;
+  }
+  #person {
+    position: absolute;
+    transform: translateX(40vw);
+    top: 15vh;
+    height: 40vh;
+  }
+  #circle {
+    height: 50vh;
+    transform: translateY(-6.5vh);
+  }
+  #win {
+    transform: translateY(11vh);
+    left: 13.5vw;
+  }
+  #frame {
+    height: 60vh;
+    top: -12vh;
+    left: -4.5vw;
+  }
+  #target {
+    transform: translateY(-8vh);
+    left: 16.5vw;
+    height: 40px;
+  }
+  #account {
+    transform: translateX(42vw);
+    width: 25vw;
+  }
+  #download {
+    transform: translateX(65vw);
+    bottom: 15vh;
+    height: 70px;
+  }
+  .buttonIcon img {
+    height: 41px;
+  }
+  #y {
+    margin-left: 25vw;
+    margin-bottom: 10%;
+  }
+  #x {
+    margin-left: 19vw;
+  }
+  .recent {
+    transform: translateY(55vh);
+    right: 15vw;
+  }
+  .recentJackpot {
+    height: 95vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 20%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(38vw);
+    top: 1vh;
+    height: 13vw;
+    width: 42vw;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(47vh);
+    left: 61%;
+  }
+  .dataButton {
+    transform: translateY(39.5vh);
+    left: 84.5%;
+  }
+  .dataHeader {
+    transform: translateY(-2vh);
+    right: 20vw;
+  }
+  .dataAmount {
+    transform: translateY(10px);
+    right: 13%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 0;
+  }
+  #person {
+    position: absolute;
+    transform: translateX(40vw);
+    top: 25vh;
+    height: 50vh;
+  }
+
+  .content {
+    height: 90vh;
+    width: 80vw;
+  }
+  #circle {
+    height: 57vh;
+    transform: translateY(-6.5vh);
+    left: px;
+  }
+  #win {
+    transform: translateY(12.5vh);
+    left: 10.5vw;
+  }
+  #frame {
+    height: 70vh;
+    top: -13vh;
+    left: -4.5vw;
+  }
+  #target {
+    transform: translateY(-8vh);
+    left: 13.5vw;
+    height: 40px;
+  }
+  #account {
+    transform: translateX(42vw);
+    bottom: 18vh;
+    height: 7vh;
+    width: 22vw;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(60vw);
+    bottom: 23vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 35px;
+    z-index: 1;
+  }
+  #y {
+    margin-left: 25vw;
+    margin-bottom: 10%;
+  }
+  #x {
+    margin-left: 19vw;
+  }
+  .recent {
+    transform: translateY(75vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 95vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 20%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(38vw);
+    top: 1vh;
+    height: 13vw;
+    width: 42vw;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+
+    transform: translateY(63vh);
+    left: 61%;
+  }
+  .dataButton {
+    transform: translateY(53vh);
+    left: 78.5%;
+  }
+  .dataHeader {
+    position: absolute;
+    color: white;
+    transform: translateY(-2vh);
+    font-style: italic;
+    right: 20vw;
+    font-size: 15px;
+  }
+  .dataAmount {
+
+    transform: translateY(25px);
+    right: 13%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .main {
+    padding: 0 10vw;
+  }
+  #person {
+    transform: translateX(45vw);
+    top: 12vh;
+    height: 40vh;
+  }
+  .content {
+    height: 55vh;
+    width: 100%;
+  }
+  #circle {
+    height: 50vh;
+    transform: translateY(-10vh);
+    left: -10px;
+  }
+  #win {
+    transform: translateY(8vh);
+    left: 15vw;
+  }
+  #frame {
+    height: 60vh;
+    top: -15vh;
+    left: -5vw;
+  }
+  #target {
+    transform: translateY(-11vh);
+    left: 17.5vw;
+    height: 50px;
+  }
+  #account {
+    transform: translateX(45vw);
+    bottom: 10vh;
+    width: 25vw;
+    height: 7vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(65vw);
+    bottom: 15vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 35px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(47vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 60vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 40%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(40vw);
+    top: 1vh;
+    height: 12vw;
+    width: 40vw;
+  }
+  p {
+    font-size: 15px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(37vh);
+    left: 68%;
+  }
+  .dataButton {
+    transform: translateY(30vh);
+    left: 85%;
+  }
+  .dataHeader {
+    right: 23vw;
+    font-size: 11px;
+  }
+  .dataAmount {
+    transform: translateY(-1px);
+    right: 13%;
+  }
+}
+@media screen and (max-width: 912px) {
+  .main {
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  #person {
+    position: absolute;
+    transform: translateX(55vw);
+    top: 12vh;
+    height: 32vh;
+  }
+  .content {
+    height: 55vh;
+    width: 100%;
+  }
+  #circle {
+    height: 42vh;
+    transform: translateY(-3.5vh);
+    left: 20px;
+  }
+  #win {
+    transform: translateY(12vh);
+    left: 28vw;
+  }
+  #frame {
+    height: 48vh;
+    top: -7vh;
+    left: -1.5vw;
+  }
+  #target {
+    transform: translateY(-5vh);
+    left: 31vw;
+    height: 50px;
+  }
+  #account {
+    transform: translateX(52vw);
+    bottom: 10vh;
+    width: 40vw;
+    height: 7vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(87vw);
+    bottom: 15vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 38px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(47vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 60vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 40%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(57vw);
+    top: 1vh;
+    height: 15vw;
+    width: 40vw;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 22px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(38.5vh);
+    left: 68%;
+
+    z-index: 7;
+  }
+  .dataButton {
+    position: absolute;
+    color: white;
+    transform: translateY(34vh);
+    left: 90.5%;
+    font-size: 20px;
+    font-style: italic;
+    z-index: 7;
+  }
+  .dataHeader {
+    position: absolute;
+    color: white;
+    transform: translateY(-0.5vh);
+    font-style: italic;
+    right: 23vw;
+    font-size: 11px;
+  }
+  .dataAmount {
+    transform: translateY(-25px);
+    right: 13%;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #person {
+    transform: translateX(55vw);
+    top: 12vh;
+    height: 40vh;
+  }
+  .content {
+    height: 60vh;
+    width: 100%;
+  }
+  #circle {
+    height: 50vh;
+    transform: translateY(-15vh);
+    left: 10px;
+  }
+  #win {
+    transform: translateY(3vh);
+    left: 19vw;
+  }
+  #frame {
+    height: 60vh;
+    top: -20vh;
+    left: -3vw;
+  }
+  #target {
+    transform: translateY(-17vh);
+    left: 22vw;
+    height: 50px;
+  }
+  #account {
+    transform: translateX(57vw);
+    bottom: 10vh;
+    width: 32vw;
+    height: 7vh;
+  }
+  #download {
+    transform: translateX(87vw);
+    bottom: 15vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 42px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(47vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 65vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 21%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(50vw);
+    top: 1vh;
+    height: 13vw;
+    width: 50vw;
+  }
+  p {
+    font-size: 15px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(42vh);
+    left: 68%;
+    z-index: 7;
+  }
+  .dataButton {
+    transform: translateY(34vh);
+    left: 90.5%;
+
+  }
+  .dataHeader {
+    transform: translateY(-2.5vh);
+    right: 25vw;
+  }
+  .dataAmount {
+    transform: translateY(-2px);
+    right: 13%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .main {
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  #person {
+    position: absolute;
+    transform: translateX(55vw);
+    top: 12vh;
+    height: 32vh;
+  }
+  .content {
+    height: 55vh;
+    width: 100%;
+  }
+  #circle {
+    height: 42vh;
+    transform: translateY(-4vh);
+    left: 20px;
+  }
+  #win {
+    transform: translateY(11vh);
+    left: 26vw;
+  }
+  #frame {
+    height: 48vh;
+    top: -7vh;
+    left: -1.5vw;
+  }
+  #target {
+    transform: translateY(-5vh);
+    left: 29vw;
+    height: 50px;
+  }
+  #account {
+    transform: translateX(52vw);
+    bottom: 10vh;
+    width: 40vw;
+    height: 7vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(87vw);
+    bottom: 15vh;
+    height: 70px;
+    z-index: 6;
+  }
+  .buttonIcon img {
+    height: 35px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(47vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 60vh;
+    width: 70vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-145%);
+  }
+  .recentAward {
+    max-width: 40%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(57vw);
+    top: 1vh;
+    height: 15vw;
+    width: 40vw;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .par {
+    margin: 0;
+  }
+  .dataProgress {
+    transform: translateY(38.5vh);
+    left: 68%;
+  }
+  .dataButton {
+    position: absolute;
+    color: white;
+    transform: translateY(33vh);
+    left: 90.5%;
+    font-size: 20px;
+    font-style: italic;
+    z-index: 7;
+  }
+  .dataHeader {
+    position: absolute;
+    color: white;
+    transform: translateY(-0.5vh);
+    font-style: italic;
+    right: 23vw;
+    font-size: 11px;
+  }
+  .dataAmount {
+    transform: translateY(-20px);
+    right: 13%;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  #win {
+    left: 23vw;
+    transform: translateY(10vh);
+
+  }
+  #target {
+    left: 27vw;
+  }
+  .dataHeader {
+    right: 23vw;
+    font-size: 10px;
+  }
+  .dataButton {
+    transform: translateY(32vh);
+  }
+  .dataAmount {
+    transform: translateY(-14px);
+
+  }
+}
+@media screen and (max-width: 540px) {
+  #win {
+    transform: translateY(10vh);
+    left: 21vw;
+  }
+
+  #circle {
+    transform: translateY(-4vh);
+    left: 13px;
+  }
+  #target {
+    left: 25vw;
+  }
+  #wheeltop {
+    transform: translateX(51vw);
+    height: 15vw;
+    width: 50vw;
+  }
+  .dataHeader {
+    right: 28vw;
+    font-size: 8px;
+    top: 20px;
+  }
+  .buttonIcon img {
+    height: 22px;
+  }
+  .dataAmount {
+    transform: translateY(-10px);
+    right: 10%;
+    font-size: 20px;
+
+  }
+  .dataButton {
+    transform: translateY(30vh);
+    left: 92%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .dataProgress {
+    transform: translateY(36.5vh);
+    left: 68%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .main {
+    width: 100%;
+    background-color: black;
+    margin: 0;
+  }
+  #person {
+    display: none;
+  }
+  .content {
+    height: 65vh;
+    width: 100%;
+  }
+  #circle {
+    height: 42vh;
+    transform: translateY(8vh);
+    left: 20px;
+  }
+  #win {
+    transform: translateY(23vh);
+    left: 37vw;
+  }
+  #frame {
+    height: 48vh;
+    top: 5vh;
+    left: -1vw;
+  }
+  #target {
+    transform: translateY(6vh);
+    left: 43.5vw;
+  }
+  #account {
+    transform: translateX(25vw);
+    bottom: 10vh;
+    width: 50vw;
+    height: 6vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(70vw);
+    bottom: 14vh;
+    height: 50px;
+    z-index: 5;
+  }
+  .buttonIcon img {
+    height: 30px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(53vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 70vh;
+    width: 95vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-108%);
+  }
+  .recentAward {
+    max-width: 40%;
+    font-size: 13px;
+  }
+  .headerSlide {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  #y {
+    margin-left: 100px;
+  }
+  #x {
+    margin-left: 50px;
+  }
+  .headerSlide img {
+    height: 25px;
+  }
+  #wheeltop {
+    transform: translateX(1vw);
+    top: 1vh;
+    height: 20vw;
+    width: 100vw;
+  }
+
+  p {
+    line-height: 1.1;
+    font-size: 15px;
+  }
+  .par {
+    margin: 50px 0 0 0;
+  }
+  .dataProgress {
+    position: absolute;
+    color: white;
+    transform: translateY(47vh);
+    left: 45%;
+    font-style: italic;
+    z-index: 7;
+  }
+  .dataButton {
+
+    transform: translateY(43.5vh);
+    left: 75%;
+
+  }
+  .dataHeader {
+    position: absolute;
+    color: white;
+    transform: translateY();
+    font-style: italic;
+    left: 12vw;
+    font-size: 12px;
+  }
+  .dataAmount {
+
+    transform: translateY(-20px);
+    left: 40%;
+
+  }
+}
+@media screen and (max-width: 412px) {
+  #win {
+    transform: translateY(21vh);
+    left: 39vw;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  #win {
+    transform: translateY(20vh);
+    left: 37vw;
+  }
+}
+@media screen and (max-width: 390px) {
+  .dataProgress {
+    transform: translateY(46.5vh);
+  }
+  p {
+    font-size: 15px;
+  }
+  .dataAmount {
+    font-size: 20px;
+    transform: translateY(-2vh);
+  }
+  .dataButton {
+    transform: translateY(43vh);
+  }
+  #account {
+    width: 50vw;
+  }
+  #win {
+    transform: translateY(20vh);
+    left: 37vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    width: 100%;
+    background-color: black;
+    margin: 0;
+  }
+  .content {
+    height: 80vh;
+    width: 100%;
+  }
+  #circle {
+    height: 52vh;
+    transform: translateY(8.5vh);
+    left: 15px;
+  }
+  #win {
+    transform: translateY(25vh);
+    left: 37vw;
+  }
+  #frame {
+    height: 59vh;
+    top: 5vh;
+    left: -2vw;
+  }
+  #target {
+    transform: translateY(7vh);
+    left: 43vw;
+  }
+  #account {
+    transform: translateX(25vw);
+    bottom: 10vh;
+    height: 8vh;
+    z-index: 6;
+  }
+  #download {
+    transform: translateX(75vw);
+    bottom: 15vh;
+    height: 50px;
+    z-index: 5;
+  }
+  .buttonIcon img {
+    height: 30px;
+    z-index: 1;
+  }
+  .recent {
+    transform: translateY(67vh);
+    right: 5vw;
+  }
+  .recentJackpot {
+    height: 85vh;
+    width: 95vw;
+    z-index: 7;
+    padding: 32px 32px 0;
+    border-radius: 20px;
+    top: -5vh;
+    right: -100vw;
+  }
+  .slide-from-right {
+    transform: translateX(-108%);
+  }
+  .recentAward {
+    max-width: 40%;
+    font-size: 13px;
+  }
+  .headerSlide img {
+    height: 25px;
+    margin-left: 75px;
+  }
+  #wheeltop {
+    transform: translateX(1vw);
+    top: 1vh;
+    height: 20vw;
+    width: 100vw;
+  }
+  p {
+    font-size: 16px;
+  }
+  .par {
+    margin: 25px 0 0 0;
+  }
+  .dataProgress {
+    position: absolute;
+    color: white;
+    transform: translateY(60vh);
+    left: 50%;
+    font-style: italic;
+    font-size: 20px;
+    z-index: 7;
+  }
+  .dataButton {
+    position: absolute;
+    color: white;
+    transform: translateY(54.5vh);
+    left: 80%;
+    font-size: 20px;
+    font-style: italic;
+    z-index: 7;
+  }
+  .dataHeader {
+
+    transform: translateY(-1vh);
+    left: 12vw;
+  }
+  .dataAmount {
+
+    transform: translateY(-10px);
+  
+  }
+}
+@media screen and (max-width: 360px) {
+  #frame {
+    height: 51vh;
+    top: 40px;
+  }
+  #circle {
+    height: 45vh;
+  }
+  #download {
+    transform: translateX(76vw);
+    bottom: 23vh;
+  }
+  .dataButton {
+    left: 82%;
+    transform: translateY(47.5vh);
+  }
+  #account {
+    transform: translateX(18vw);
+    bottom: 17vh;
+    width: 65vw;
+  }
+  .dataProgress {
+    transform: translateY(53vh);
+    left: 45%;
+  }
+  .recent {
+    transform: translateY(60vh);
+    right: 5vw;
+  }
+  #win {
+    transform: translateY(20vh);
+    left: 37vw;
+  }
+  .dataAmount {
+    font-size: 15px;
+    transform: translateY(-2vh);
+  }
+}
+@media screen and (max-width: 280px) {
+  .dataHeader {
+    font-size: 9px;
+  }
+  .dataAmount {
+    font-size: 15px;
+    transform: translateY(-2.5vh);
+  }
+  .buttonIcon img {
+    height: 25px;
+  }
+  #frame {
+    height: 45vh;
+    top: 33px;
+  }
+  #circle {
+    height: 38vh;
+  }
+  #win {
+    height: 10vh;
+    top: 20px;
+    left: 38vw;
+  }
+  #target {
+    height: 25px;
+    left: 45vw;
+  }
+  p {
+    font-size: 13px;
+  }
+  .headerSlide h1 {
+    font-size: 20px;
+  }
+  .recentAward {
+    max-width: 55%;
+  }
+}
+
+.slide-br {
+	-webkit-animation: slide-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-br {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px) translateX(100px);
+            transform: translateY(100px) translateX(100px);
+  }
+}
+@keyframes slide-br {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(20vw) translateX(20vw);
+            transform: translateY(20vw) translateX(20vw);
+  }
+}

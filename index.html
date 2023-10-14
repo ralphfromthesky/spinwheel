@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="sliders">SLIDE</button>
+    <div class="main" id="mainSlide">
+        <div class="content" id="con">
+            <div class="buttonIcon">
+                <img src="./images/rule.png" alt="" id="questionMark">
+                <img src="./images/download.png" alt="">
+                <img src="./images/exitBtn.png" alt="">
+            </div>
+            <img src="./images/wheeltop.png" alt="" id="wheeltop">
+            <div class="dataHeader">
+                <h3>Roulette and total bonus</h3>
+            </div>
+            <div class="dataAmount">
+                <h2>$69696969</h2>
+            </div>
+            <img src="./images/person.png" id="person" alt="">
+            <div class="dataButton">
+                <h3>0</h3>
+            </div>
+            <img src="./images/acBtnBg.png" alt="" id="account">
+            <div class="dataProgress">
+                <h3>0.001/1</h3>
+            </div>
+            <img src="./images/amtBtn.png" alt="" id="download">
+            <div class="rotating">
+                <img src="./images/adminWheel.png" alt="" id="circle">
+                <img src="./images/win.png" alt="" id="win">
+                <img src="./images/circle-frame-min.png" alt="" id="frame" class="rotate">
+                <img src="./images/target.png" alt="" id="target">
+            </div>
+            <div class="recent">
+                <h3 id="recent">Recent Jackpot ></h3>
+            </div>
+            <div class="recentJackpot" id="recents">
+                <div class="mainHeader">
+                    <div class="headerSlide">
+                        <h1>Recent Jackpots</h1>
+                        <img src="./images/exitBtn.png" alt="" id="x">
+                    </div>
+                </div>
+                <div class="recentAward">
+                    <h3>Recent Award</h3>
+                </div>
+                <div class="timeUserBonus">
+                    <h3>Time</h3>
+                    <h3>User</h3>
+                    <h3>Bonus</h3>
+                </div>
+            </div>
+            <div class="recentJackpot" id="rules">
+                <div class="mainHeader">
+                    <div class="headerSlide">
+                        <h1>Rules</h1>
+                        <img src="./images/exitBtn.png" alt="" id="y">
+                    </div>
+                </div>
+                <div class="par">
+                    <p>
+                        WinBet Funny Roulette <br><br>
+
+                        Spin our Lucky Wheel every day to win real money jackpots and iPhone 14 1BTC Mega Jackpot!
+                        <br><br>
+                        Lucky Roulette Rules. <br>
+                        1. Spin is ready for 24 Hours <br>
+                        2. You can spin the lucky roulette once for every10,000 PHP bet. The more bets, the more prizes
+                        you win. There is no upper limit! <br>
+                        3. Players who win the physical prize (iPhone 14) will receive an internal letter from WinBet,
+                        and the VIP customer service manager will contact the customer to send the prize. <br><br>
+
+                        Conditions.<br>
+                        1. Each player can only have one account.<br>
+                        2. Players who open multiple accounts or impersonate one account will be disqualified from the
+                        promotion. Balances may be confiscated and accounts may be frozen.<br>
+                        3. WinBet reserves the right to amend, amend, suspend, cancel, decline or cancel this promotion
+                        at its sole discretion.<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const recent = document.getElementById('recent');
+        const x = document.getElementById('x');
+        const y = document.getElementById('y');
+        const recents = document.getElementById('recents');
+        const questionMark = document.getElementById('questionMark');
+        const rules = document.getElementById('rules')
+        const sliders = document.getElementById('sliders')
+        const mainSlide = document.getElementById('con')
+
+
+
+        const slideToCenter = () => {
+            mainSlide.classList.toggle('slide-br')
+        }    
+    
+
+        const slide = () => {
+            recents.classList.toggle('slide-from-right')
+        }
+
+        const slideRules = () => {
+            rules.classList.toggle('slide-from-right')
+        }
+
+        recent.addEventListener('click', slide)
+        x.addEventListener('click', slide)
+        questionMark.addEventListener('click', slideRules)
+        y.addEventListener('click', slideRules)
+        sliders.addEventListener('click', slideToCenter)
+    </script>
+</body>
+
+</html>

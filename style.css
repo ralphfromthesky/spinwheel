@@ -16,7 +16,7 @@
   position: absolute;
 }
 .content {
-  background-image: url("/task09-19-2023/images/wheelbg.png");
+  background-image: url("./images/wheelbg.png");
   background-size: cover;
   background-position: center;
   height: 60vh;
